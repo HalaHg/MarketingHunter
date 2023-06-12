@@ -22,6 +22,11 @@
 
     <link rel="stylesheet" href="~/Content/owl.carousel.css" />
     <link rel="stylesheet" href="~/Content/owl.theme.css" />
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script>
+    var url = '@UtilitiesEngine.Url.GetBaseUrl()';
+    </script>
+
 
 </head>
 <body>
@@ -30,7 +35,6 @@
     @RenderBody()
 
     @{ Html.RenderPartial("_Footer");}
-    <script src="~/Scripts/jquery-3.4.1.js"></script>
     <script src="~/Scripts/owl.carousel.js"></script>
     <script>
         $(document).ready(function () {

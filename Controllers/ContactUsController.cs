@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using MarketingHunter.Helper;
+using System.Configuration;
 using System.Web.Mvc;
 
 namespace MarketingHunter.Controllers
@@ -13,5 +11,13 @@ namespace MarketingHunter.Controllers
         {
             return View();
         }
-    }
+
+        [HttpPost]
+        public ActionResult ContactUs(string name, string email, string mobile, string message)
+        {
+            SendEmailDTO res = Helper.Helper.SendEmail(email, ConfigurationManager.AppSettings["toEmail"], ConfigurationManager.AppSettings["ccEmail"], "", "Contact Us", message, "");
+
+            return Json(res);
+        }
+    }  
 }
