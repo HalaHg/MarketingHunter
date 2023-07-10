@@ -201,7 +201,7 @@ a, a:hover {
 }
 
     .banner img {
-        min-height: 300px;
+        min-height: auto;
         max-height: 500px;
         width: 100%;
     }
